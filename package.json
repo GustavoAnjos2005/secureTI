@@ -1,0 +1,42 @@
+{
+  "name": "meu_projeto",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aos": "^2.3.4",
+    "autoprefixer": "^10.4.14",
+    "axios": "^1.8.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "framer-motion": "^12.12.1",
+    "lucide-react": "^0.482.0",
+    "mongodb": "^6.14.2",
+    "next": "^14.2.24",
+    "next-connect": "^1.0.0",
+    "postcss": "^8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-intersection-observer": "^9.16.0",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.7",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "license": "ISC"
+}
