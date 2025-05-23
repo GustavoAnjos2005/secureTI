@@ -134,28 +134,6 @@ export function Footer() {
                 <span className="text-gray-300 text-sm">Av. Paulista, 1000<br/>São Paulo, SP</span>
               </li>
             </ul>
-            
-            <div className="mt-6">
-              <h4 className="text-white text-sm font-semibold mb-3">Newsletter</h4>
-              <div className="flex">
-                <div className={`relative flex-1 transition-all duration-300 ${emailFocus ? 'ring-2 ring-blue-400' : 'ring-0'}`}>
-                  <input 
-                    type="email" 
-                    placeholder="Seu e-mail" 
-                    className="w-full bg-blue-900/50 border border-blue-800 text-white px-3 py-2 text-sm rounded-l-md placeholder:text-gray-500 focus:outline-none"
-                    onFocus={() => setEmailFocus(true)}
-                    onBlur={() => setEmailFocus(false)}
-                  />
-                </div>
-                <motion.button 
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-r-md text-sm font-medium transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Inscrever
-                </motion.button>
-              </div>
-            </div>
           </div>
         </div>
         
@@ -165,11 +143,14 @@ export function Footer() {
           </p>
           
           <div className="flex space-x-6">
-            <Link href="/politica-privacidade" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
               Política de Privacidade
             </Link>
-            <Link href="/termos-uso" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
               Termos de Uso
+            </Link>
+            <Link href="/referencias" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Referências
             </Link>
           </div>
         </div>

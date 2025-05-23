@@ -111,7 +111,7 @@ export function Header() {
               className="ml-2"
             >
               <Link
-                href="/contato"
+                href="#"
                 className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-md transition-colors duration-300 flex items-center"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

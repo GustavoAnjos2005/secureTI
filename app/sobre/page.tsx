@@ -92,24 +92,40 @@ export default function SobrePage() {
   // Equipe
   const equipe = [
     { 
-      nome: "João Silva", 
-      cargo: "Especialista em Banco de Dados",
-      foto: "/joao-silva.jpg" 
+      nome: "Benjamim Junior", 
+      foto: "/benjamim.jpg",
+      linkedin: "https://www.linkedin.com/in/junior-benjamin-649567340/",
+      github: "https://github.com/Juniorbenjamin93"
     },
     { 
-      nome: "Maria Souza", 
-      cargo: "Consultora de Segurança",
-      foto: "/maria-souza.jpg" 
+      nome: "Gustavo Anjos",
+      foto: "/gustavo.jpg",
+      linkedin: "https://www.linkedin.com/in/gustavo-anjos-231981239/",
+      github: "https://github.com/GustavoAnjos2005" 
     },
     { 
-      nome: "Pedro Costa", 
-      cargo: "Arquiteto de Soluções",
-      foto: "/pedro-costa.jpg" 
+      nome: "Julia Almeida", 
+      foto: "/julia.jpg",
+      linkedin: "https://www.linkedin.com/in/julia-almeida-85b4692a6/",
+      github: "https://github.com/almeidajuh"
     },
     { 
-      nome: "Ana Lima", 
-      cargo: "Analista de Desempenho",
-      foto: "/ana-lima.jpg" 
+      nome: "Luan Tardim",
+      foto: "/luan.jpg",
+      linkedin: "https://www.linkedin.com/in/luan-tardim/",
+      github: "https://github.com/luban4" 
+    },
+    { 
+      nome: "Matheus Muller", 
+      foto: "/matheus.jpg",
+      linkedin: "#",
+      github: "https://github.com/Mat-Muller"
+    },
+    { 
+      nome: "Taynara Luiza",
+      foto: "/taynara.jpg",
+      linkedin: "https://www.linkedin.com/in/taynara-pamela-luiza-da-silva-b0b914219/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      github: "https://github.com/tayluiza" 
     }
   ];
 
@@ -281,11 +297,11 @@ export default function SobrePage() {
             Nossa <span className="text-blue-400">Equipe</span>
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 xl:gap-6">
             {equipe.map((membro, index) => (
               <motion.div 
                 key={index}
-                className="bg-gradient-to-br from-blue-800/40 to-blue-700/20 backdrop-blur-sm p-6 rounded-xl border border-blue-700/30 text-center relative overflow-hidden"
+                className="bg-gradient-to-br from-blue-800/40 to-blue-700/20 backdrop-blur-sm p-4 lg:p-5 rounded-xl border border-blue-700/30 text-center relative overflow-hidden"
                 whileHover={{ y: -5 }}
                 data-aos="fade-up"
                 data-aos-delay={100 + (index * 50)}
@@ -293,30 +309,39 @@ export default function SobrePage() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/50"></div>
                 
                 <div className="relative z-10">
-                  <div className="w-24 h-24 bg-blue-800/60 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
+                  <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full mx-auto mb-3 overflow-hidden border-2 border-blue-400/50 shadow-lg">
+                    <img 
+                      src={membro.foto !== "#" ? membro.foto : `https://ui-avatars.com/api/?name=${encodeURIComponent(membro.nome)}&background=1e40af&color=7dd3fc&size=150`} 
+                      alt={`Foto de ${membro.nome}`}
+                      className={`w-full h-full object-cover ${membro.nome === "Taynara Luiza" ? "object-[center_25%]" : ""}`}
+                    />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-1">{membro.nome}</h3>
-                  <p className="text-blue-300 mb-4">{membro.cargo}</p>
+                  <h3 className="text-base lg:text-lg font-bold text-white mb-1">{membro.nome}</h3>
                   
-                  <div className="flex justify-center space-x-3">
-                    {[
-                      <svg key="linkedin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  <div className="flex justify-center space-x-3 mt-2">
+                    <a 
+                      href={membro.linkedin !== "#" ? membro.linkedin : "#"} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className={`hover:scale-110 transition-transform ${membro.linkedin === "#" ? "opacity-50 cursor-not-allowed" : ""}`}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 hover:text-blue-400 transition-colors">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
-                      </svg>,
-                      <svg key="github" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 hover:text-blue-400 transition-colors">
+                      </svg>
+                    </a>
+                    <a 
+                      href={membro.github !== "#" ? membro.github : "#"} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className={`hover:scale-110 transition-transform ${membro.github === "#" ? "opacity-50 cursor-not-allowed" : ""}`}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 hover:text-blue-400 transition-colors">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                       </svg>
-                    ].map((icon, i) => (
-                      <a key={i} href="#" className="hover:scale-110 transition-transform">
-                        {icon}
-                      </a>
-                    ))}
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -349,7 +374,7 @@ export default function SobrePage() {
               className="inline-block"
             >
               <Link
-                href="#contato"
+                href="#"
                 className="bg-white text-blue-700 hover:text-blue-800 px-8 py-3 rounded-lg text-lg font-medium transition-colors shadow-lg inline-flex items-center"
               >
                 <span>Fale Conosco</span>
