@@ -1,8 +1,8 @@
 # SecureTI
 
-## This project was created as an educational tool to raise awareness about database security and best practices in information security.
+## This project was developed as a college assignment, focusing on creating a professional and modern website for a fictional cybersecurity company.
 
-It simulates a learning platform where users can explore key concepts of database protection, encryption, vulnerabilities, and practical measures to improve security in real-life applications.
+The site presents services related to information security, with special emphasis on secure database practices, company values, and a sleek, responsive UI.
 
 This full-stack web application was built using:
 
